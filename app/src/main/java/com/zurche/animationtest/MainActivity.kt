@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val constraintSetTwo = ConstraintSet()
         constraintSetTwo.load(this, R.layout.poster_description)
 
-        findViewById<ImageView>(R.id.movie_poster).setOnClickListener {
+        movie_poster.setOnClickListener {
             TransitionManager.beginDelayedTransition(root_main)
             val constraint = if (set) constraintSet else constraintSetTwo
             constraint.applyTo(root_main)
